@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
-project(empty_imgui C CXX)
+set(PROJECT_NAME "empty_imgui")
+ 
+project(${PROJECT_NAME} C CXX)
 
 #set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/") #NOTE: useful to have, here so i won't forget
 
@@ -44,7 +46,7 @@ INCLUDE_DIRECTORIES(${GL3W})
 INCLUDE_DIRECTORIES(${GLFW}/include)
 
 link_directories(${GLFW}/lib)
-ADD_EXECUTABLE(empty_imgui ${SRCS} ${HDRS})
-TARGET_LINK_LIBRARIES(empty_imgui ${GLFW_LIBS} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY})
+ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS} ${HDRS})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${GLFW_LIBS} ${OPENGL_gl_LIBRARY} ${OPENGL_glu_LIBRARY})
 
 
