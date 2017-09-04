@@ -22,6 +22,7 @@ SET(GLFW_LIBS
 SET(SRCS
     ${GL3W}/GL/gl3w.c
     ${IMGUI}/imgui.cpp
+    ${IMGUI}/imgui_draw.cpp
     src/imgui_impl_glfw_gl3.cpp
     
     src/main.cpp
